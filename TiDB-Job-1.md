@@ -18,7 +18,7 @@ TiDB，TiKV，PD均是从Pingcap Github仓库fork并使用Master分支编译
 
 因为TiDB是go项目，并且采用Go Modules来管理项目的依赖。我们先到go mod下查看其中go语言的版本号。
 
-![](https://ben-space-1252588607.cos.ap-shanghai.myqcloud.com/img/tidb-go-version.png)
+![go-version](https://ben-space-1252588607.cos.ap-shanghai.myqcloud.com/img/tidb-go-version.png)
 
 然后我们便安装这个version的go就好了
 
@@ -37,7 +37,8 @@ make
 ```
 
 当编译完成后可以在TiDB项目的bin文件夹下看到编译后的文件
-![](https://ben-space-1252588607.cos.ap-shanghai.myqcloud.com/img/tidb%20compile.png)
+
+![tidb-compile](https://ben-space-1252588607.cos.ap-shanghai.myqcloud.com/img/tidb%20compile.png)
 
 
 ### 编译PD
@@ -46,13 +47,16 @@ make
 我在编译的时候就遇到了这个下载资源很慢的情况，于是我便直接下载了这个资源文件放在对应的cache目录下，跳过了这一步。
 
 直接通过这个URL下载
-![](https://ben-space-1252588607.cos.ap-shanghai.myqcloud.com/img/pd-dashborad-url.png)
+
+![pd-dashborad-url](https://ben-space-1252588607.cos.ap-shanghai.myqcloud.com/img/pd-dashborad-url.png)
 
 放到对应的目录下
-![](https://ben-space-1252588607.cos.ap-shanghai.myqcloud.com/img/pd-dashborad.png)
+
+![pd-dashborad](https://ben-space-1252588607.cos.ap-shanghai.myqcloud.com/img/pd-dashborad.png)
 
 很快看到编译好的文件就出来了
-![](https://ben-space-1252588607.cos.ap-shanghai.myqcloud.com/img/pd-server.png)
+
+![pd-server](https://ben-space-1252588607.cos.ap-shanghai.myqcloud.com/img/pd-server.png)
 
 ### 编译TiKV
 Tikv和TiDB和PD不一样。TiKV是采用Rust编写的，采用cargo 进行项目管理，编译的时候如果在本地可以直接cargo编译。
@@ -86,7 +90,8 @@ tiup playground \
 
 修改的位置
 session/session.go:1494
-![](https://ben-space-1252588607.cos.ap-shanghai.myqcloud.com/img/hello_transaction_code.png)
+
+![hello_transaction_code](https://ben-space-1252588607.cos.ap-shanghai.myqcloud.com/img/hello_transaction_code.png)
 
 
 登陆TiDB
@@ -111,5 +116,6 @@ CREATE TABLE IF NOT EXISTS `student`(
 ```
 
 监听日志看到对应日志输出
+
 ![hello transaction](https://ben-space-1252588607.cos.ap-shanghai.myqcloud.com/img/hello-tranaction-log.png)
 
