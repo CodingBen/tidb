@@ -100,20 +100,9 @@ session/session.go:1494
 mysql -u root  -h 127.0.0.1 -P 4000
 ```
 
-
-建个表吧，也能打开事务
+打开事务
 ```sql
-show datbases;
-
-use test;
-
-# classic student table
-CREATE TABLE IF NOT EXISTS `student`(
-   `sid` INT UNSIGNED AUTO_INCREMENT,
-   `name` VARCHAR(100) NOT NULL DEFAULT '',
-   `gender` VARCHAR(40) NOT NULL DEFAULT '',
-   PRIMARY KEY ( `sid` )
-);
+begin;
 ```
 
 监听日志看到对应日志输出
